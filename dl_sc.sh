@@ -1,0 +1,25 @@
+#curl -o test.html -e http://sc.studioclassroom.com/Sc-rD.php http://sc.studioclassroom.com/index3.php?day=2015-08-11 -D header.html
+#cat header.html | grep Location | awk '{print $2}'
+
+#for 空中英語教室
+#$1 2015-08-10
+curl -o test.html -e http://sc.studioclassroom.com/Sc-rD.php http://sc.studioclassroom.com/index3.php?day=$1 -D header.html
+#FILENAME=`cat header.html | grep Location | awk -F 'studio/' '{print $2}'`
+cat header.html | grep Location | awk -F 'studio/' '{print $2}' > filename.txt
+dos2unix filename.txt
+FILENAME=`cat filename.txt`
+echo "FILENAME is $FILENAME"
+
+#FILENAME=$1
+RENAME_WAV=`echo $FILENAME | cut -c 1-11`.wav
+RENAME_MP3=`echo $FILENAME | cut -c 1-11`.mp3
+echo "RENAME_WAV is $RENAME_WAV"
+echo "RENAME_MP3 is $RENAME_MP3"
+
+#mimms mms://203.69.69.81/studio/20150807baaaca2c29c61254d44f0c9a3d7c913fdf2e43ac2a3609f3811296280760775630b.wma
+echo "run command: mimms mms://203.69.69.81/studio/$FILENAME"
+MMS_PATH="mms://203.69.69.81/studio/$FILENAME"
+#mimms mms://203.69.69.81/studio/$FILENAME
+mimms $MMS_PATH
+mplayer $FILENAME -ao pcm:file=$RENAME_WAV
+lame -ms $RENAME_WAV -o $RENAME_MP3
