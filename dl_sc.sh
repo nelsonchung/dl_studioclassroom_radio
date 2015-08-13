@@ -1,6 +1,3 @@
-#curl -o test.html -e http://sc.studioclassroom.com/Sc-rD.php http://sc.studioclassroom.com/index3.php?day=2015-08-11 -D header.html
-#cat header.html | grep Location | awk '{print $2}'
-
 #for 空中英語教室
 #$1 2015-08-10
 curl -o test.html -e http://sc.studioclassroom.com/Sc-rD.php http://sc.studioclassroom.com/index3.php?day=$1 -D header.html
@@ -26,4 +23,4 @@ MMS_PATH="mms://203.69.69.81/studio/$FILENAME"
 mimms $MMS_PATH
 mplayer $FILENAME -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
-id3v2 --TYER $YEAR --TRCK $TRACK --TALB 空中英語教室-$MONTH $RENAME_MP3
+id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 空中英語教室 --TALB 空中英語教室-$MONTH $RENAME_MP3
