@@ -11,6 +11,9 @@ FILENAME=`cat filename.txt`
 echo "FILENAME is $FILENAME"
 
 #FILENAME=$1
+YEAR=`echo $FILENAME | cut -c 1-4`
+MONTH=`echo $FILENAME | cut -c 5-6`
+TRACK=`echo $FILENAME | cut -c 7-8`
 RENAME_WAV=`echo $FILENAME | cut -c 1-11`.wav
 RENAME_MP3=`echo $FILENAME | cut -c 1-11`.mp3
 echo "RENAME_WAV is $RENAME_WAV"
@@ -23,3 +26,4 @@ MMS_PATH="mms://203.69.69.81/studio/$FILENAME"
 mimms $MMS_PATH
 mplayer $FILENAME -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
+id3v2 --TYER $YEAR --TRCK $TRACK --TALB 空中英語教室-$MONTH $RENAME_MP3
