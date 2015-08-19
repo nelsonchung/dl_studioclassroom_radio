@@ -11,6 +11,7 @@ echo "FILENAME is $FILENAME"
 YEAR=`echo $FILENAME | cut -c 1-4`
 MONTH=`echo $FILENAME | cut -c 5-6`
 TRACK=`echo $FILENAME | cut -c 7-8`
+RENAME_WMA=`echo $FILENAME | cut -c 1-11`.wma
 RENAME_WAV=`echo $FILENAME | cut -c 1-11`.wav
 RENAME_MP3=`echo $FILENAME | cut -c 1-11`.mp3
 echo "RENAME_WAV is $RENAME_WAV"
@@ -21,6 +22,7 @@ echo "run command: mimms mms://203.69.69.81/studio/$FILENAME"
 MMS_PATH="mms://203.69.69.81/studio/$FILENAME"
 #mimms mms://203.69.69.81/studio/$FILENAME
 mimms $MMS_PATH
-mplayer $FILENAME -ao pcm:file=$RENAME_WAV
+mv $FILENAME $RENAME_WMA
+mplayer $RENAME_WMA -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
 id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 彭蒙惠英語 --TALB 彭蒙惠英語-$MONTH $RENAME_MP3
