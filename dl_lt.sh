@@ -25,4 +25,6 @@ mimms $MMS_PATH
 mv $FILENAME $RENAME_WMA
 mplayer $RENAME_WMA -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
-id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 大家說英語 --TALB 大家說英語-$MONTH $RENAME_MP3
+#id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 大家說英語 --TALB 大家說英語-$MONTH $RENAME_MP3
+id3v2 --TYER $YEAR $RENAME_MP3
+python parseid3.py lta 

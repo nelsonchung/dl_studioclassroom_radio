@@ -1,4 +1,4 @@
 代辦事項
-1. 利用id3v2 utility 自動加入專輯封面功能
-2. 將mp3自動分配到對應的資料夾下  
-3. 同步到baidu cloud
+
+將mp3自動分配到對應的資料夾下  
+同步到baidu cloud
