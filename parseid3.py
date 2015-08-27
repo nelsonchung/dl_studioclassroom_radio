@@ -16,7 +16,7 @@ print image_file
 #20150803ada.mp3
 #mp3_file=str(datetime.datetime.now().year)+str(datetime.datetime.now().month)+str(datetime.datetime.now().day)+"ada.mp3"
 file_format=datetime.datetime.now().strftime('%Y')+datetime.datetime.now().strftime('%m')+datetime.datetime.now().strftime('%d')
-if sys.argv[2] != "":
+if len(sys.argv) == 3: 
     file_format=sys.argv[2]
 mp3_file=file_format+tag+".mp3"
 print mp3_file
