@@ -1,5 +1,5 @@
 DATE=`date +"%Y-%m-%d"`
-HOUR_RUN=06
+HOUR_RUN=02
 MINUTE_RUN=00
 #echo $DATE
 

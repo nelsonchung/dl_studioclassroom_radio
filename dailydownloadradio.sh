@@ -3,5 +3,5 @@ DATE=`date +"%Y-%m-%d"`
 echo "Date is $DATE"
 
 dl_ad.sh $DATE
-dl_sc.sh $DATE
+dl_ba.sh $DATE
 dl_lt.sh $DATE
