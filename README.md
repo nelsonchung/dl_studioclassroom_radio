@@ -9,16 +9,3 @@ mimms
 mplayer
 lame
 id3v2
-
-##########檔案功能說明##########
-dl_ad.sh
-下載"彭蒙惠英語"廣播檔
-
-dl_sc.sh
-下載"空中英語教室"廣播檔
-
-dl_lt.sh
-下載"大家說英語"廣播檔
-
-dailydownloadradio.sh
-下載當日的"大家說英語", "空中英語教室", 以及"彭蒙惠英語"
