@@ -5,3 +5,5 @@ echo "Date is $DATE"
 dl_ad.sh $DATE
 dl_ba.sh $DATE
 dl_lt.sh $DATE
+ok.sh
+sync_baidu.sh 
