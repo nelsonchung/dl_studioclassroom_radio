@@ -23,7 +23,8 @@ MMS_PATH="mms://203.69.69.81/studio/$FILENAME"
 #mimms mms://203.69.69.81/studio/$FILENAME
 mimms $MMS_PATH
 mv $FILENAME $RENAME_WMA
-sleep 1
+#sleep 1
+sync
 mplayer $RENAME_WMA -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
 #id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 空中英語教室 --TALB 空中英語教室-$MONTH $RENAME_MP3
