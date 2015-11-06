@@ -28,5 +28,6 @@ sync
 mplayer $RENAME_WMA -ao pcm:file=$RENAME_WAV
 lame -ms $RENAME_WAV -o $RENAME_MP3
 #id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 彭蒙惠英語 --TALB 彭蒙惠英語-$MONTH $RENAME_MP3
-id3v2 --TYER $YEAR $RENAME_MP3
-python parseid3.py ada
+#id3v2 --TYER $YEAR $RENAME_MP3
+#python parseid3.py ada
+parseid3.sh ada
