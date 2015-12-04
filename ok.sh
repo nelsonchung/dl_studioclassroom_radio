@@ -40,6 +40,6 @@ fi
 
 if [ $FILE_EXIST_ADA == "1" ] && [ $FILE_EXIST_BAA == "1" ] && [ $FILE_EXIST_LTA == "1" ]
 then
-    mv *.wma wma
+    mv *.wma done/wma
     rm *.wav
 fi 
