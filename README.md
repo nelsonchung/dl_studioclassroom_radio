@@ -18,5 +18,5 @@ Saving the radio file of www.studioclassroom.com
 ***
 
 ##如何使用
-source ~/.bashrc 
-./dailydownloadradio.sh
+1. source ~/.bashrc 
+2. ./dailydownloadradio.sh
