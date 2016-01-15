@@ -1,5 +1,6 @@
 mkdir -p baidu/studioclassroom
 mkdir -p done/
+mkdir -p done/wma
 
 folder_name=`date +"%Y-%m"`
 mkdir -p done/$folder_name/ada
