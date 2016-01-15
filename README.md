@@ -1,10 +1,14 @@
-# dl_studioclassroom_radio
+#dl_studioclassroom_radio
 Saving the radio file of www.studioclassroom.com
 
-##########需要安裝的工具##########
+***
+
+##需要安裝的工具
 執行setupenv.sh
 
-##########百度雲認證##########
+***
+
+##百度雲認證
 mkdir -p baidu
 cd baidu
 bypy.py -v syncup
