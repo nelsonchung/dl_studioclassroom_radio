@@ -6,16 +6,16 @@
 
 echo "==============================Enter parseid3.sh==========================================================="
 TYPE=$1
-YEAR=`date +"%Y"`
-MONTH=`date +"%m"`
-DAY=`date +"%d"`
+YEAR=$2
+MONTH=$3
+DAY=$4
 echo $YEAR
 echo $MONTH
 echo $DAY
 TRACK_NUM=$DAY
-DATE_mp3=`date +"%Y%m%d$TYPE"`
+DATE_mp3="$YEAR$MONTH$DAY$TYPE"
 echo $DATE_mp3
-DATE_cover=`date +"%Y-%m-$TYPE"`
+DATE_cover="$YEAR-$MONTH-$TYPE"
 echo $DATE_cover
 
 MP3_FILE=$DATE_mp3".mp3"

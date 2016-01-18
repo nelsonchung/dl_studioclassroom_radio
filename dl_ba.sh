@@ -10,7 +10,8 @@ echo "FILENAME is $FILENAME"
 #FILENAME=$1
 YEAR=`echo $FILENAME | cut -c 1-4`
 MONTH=`echo $FILENAME | cut -c 5-6`
-TRACK=`echo $FILENAME | cut -c 7-8`
+DAY=`echo $FILENAME | cut -c 7-8`
+TRACK=$DAY
 RENAME_WMA=`echo $FILENAME | cut -c 1-11`.wma
 RENAME_WAV=`echo $FILENAME | cut -c 1-11`.wav
 RENAME_MP3=`echo $FILENAME | cut -c 1-11`.mp3
@@ -30,4 +31,4 @@ lame -ms $RENAME_WAV -o $RENAME_MP3
 #id3v2 --TYER $YEAR --TRCK $TRACK --TPE1 空中英語教室 --TALB 空中英語教室-$MONTH $RENAME_MP3
 #id3v2 --TYER $YEAR $RENAME_MP3
 #python parseid3.py baa
-parseid3.sh baa
+parseid3.sh baa $YEAR $MONTH $DAY
