@@ -1,5 +1,5 @@
 #for 空中英語教室
-DATE=`date +"%Y-%m-%d"`
+DATE=`date +"%Y%m%d"`
 echo "Date is $DATE"
 YEAR=`echo $DATE | cut -c 1-4`
 MONTH=`echo $DATE | cut -c 5-6`
