@@ -12,10 +12,11 @@ ln -sf $PWD/done/$folder_name $PWD/baidu/studioclassroom/
 #20150901ada.mp3  20150901ada.wma  20150901baa.wav  20150901lta.mp3  20150901lta.wma
 #20150901ada.wav  20150901baa.mp3  20150901baa.wma  20150901lta.wav
 
-#FILE_FORMAT=`date +"%Y%m%d"`
-YEAR=$1
-MONTH=$2
-DAY=$3
+
+FILENAME=`cat filename.txt`
+YEAR=`echo "$FILENAME" | cut -c 1-4`
+MONTH=`echo "$FILENAME" | cut -c 5-6`
+DAY=`echo "$FILENAME" | cut -c 7-8`
 FILE_FORMAT="$YEAR$MONTH$DAY"
 MP3_ADA=$FILE_FORMAT"ada.mp3"
 MP3_BAA=$FILE_FORMAT"baa.mp3"
