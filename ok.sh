@@ -7,7 +7,9 @@ mkdir -p done/$folder_name/ada
 mkdir -p done/$folder_name/baa
 mkdir -p done/$folder_name/lta
 
-ln -sf $PWD/done/$folder_name $PWD/baidu/studioclassroom/
+BAIDU_PATH="$PWD/baidu/studioclassroom/"
+ln -sf $PWD/done/$folder_name $BAIDU_PATH
+ln -sf $PWD/done/wma $BAIDU_PATH
 
 #20150901ada.mp3  20150901ada.wma  20150901baa.wav  20150901lta.mp3  20150901lta.wma
 #20150901ada.wav  20150901baa.mp3  20150901baa.wma  20150901lta.wav
