@@ -8,4 +8,4 @@ sudo cp bypy.py /usr/bin/
 cd -
 
 PWD=`pwd`
-echo "export PATH=\"\$PATH:$PWD\"" >> /home/nelson/.bashrc
+echo "export PATH=\"\$PATH:$PWD\"" >> $HOME/.bashrc
