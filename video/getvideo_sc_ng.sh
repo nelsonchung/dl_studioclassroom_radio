@@ -48,10 +48,11 @@ cat $VIDEO_FILE_NAME | grep "#" -v > $OUTPUT_RESULT_FILE
 dos2unix $OUTPUT_RESULT_FILE
 
 #create folder
+folder_name=`date +"%Y-%m"`
 DATE=`date +"%Y-%m-%d"`
-foldername="$DATE-baa"
+baa_high_quality_foldername="$DATE-baa"
 baa_high_quality_local_path="../done/$folder_name/video/baa-high-quality_1200K"
-baa_high_quality_local_path_with_filename="$baa_high_quality_local_path/$foldername"
+baa_high_quality_local_path_with_filename="$baa_high_quality_local_path/$baa_high_quality_foldername"
 mkdir -p $baa_high_quality_local_path
 mkdir -p $baa_high_quality_local_path_with_filename
 cp $VIDEO_FILE_NAME $baa_high_quality_local_path_with_filename
