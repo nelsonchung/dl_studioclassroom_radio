@@ -12,3 +12,6 @@ mkdir -p ../done/$folder_name/video/lta
 
 mv *sc*.wmv ../done/$folder_name/video/baa 
 mv *lt*.wmv ../done/$folder_name/video/lta 
+
+#download sc high quality video
+/getvideo_sc_ng.sh
