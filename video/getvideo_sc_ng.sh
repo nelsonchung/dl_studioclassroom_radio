@@ -52,11 +52,10 @@ folder_name=`date +"%Y-%m"`
 DATE=`date +"%Y-%m-%d"`
 baa_high_quality_foldername="$DATE-baa"
 baa_high_quality_local_path="../done/$folder_name/video/baa-high-quality_1200K"
-baa_high_quality_local_path_with_filename="$baa_high_quality_local_path/$baa_high_quality_foldername"
-mkdir -p $baa_high_quality_local_path
-mkdir -p $baa_high_quality_local_path_with_filename
-cp $VIDEO_FILE_NAME $baa_high_quality_local_path_with_filename
-cd $FOLDERNAME
+#baa_high_quality_local_path_with_filename="$baa_high_quality_local_path/$baa_high_quality_foldername"
+mkdir -p $baa_high_quality_foldername
+cp $VIDEO_FILE_NAME $baa_high_quality_foldername
+cd $baa_high_quality_foldername
 
 
 #get real file now
@@ -65,3 +64,6 @@ do
     wget ${DOWNLOAD_LINK_PREFIX}${DOWNLOAD_LINK_PREFIX_SUB_PATH}/${file_name}
     #echo ${DOWNLOAD_LINK_PREFIX}${DOWNLOAD_LINK_PREFIX_SUB_PATH}/${file_name}
 done <../$OUTPUT_RESULT_FILE
+
+cd .. 
+mv $baa_high_quality_foldername $baa_high_quality_local_path
