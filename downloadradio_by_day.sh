@@ -6,7 +6,7 @@ if [ "$DAY" == "" ]; then
     exit
 fi
 
-get_image.sh
-dl_ad.sh $DAY
-dl_ba.sh $DAY
-dl_lt.sh $DAY
+./get_image.sh
+./dl_ad.sh $DAY
+./dl_ba.sh $DAY
+./dl_lt.sh $DAY
