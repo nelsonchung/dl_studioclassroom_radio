@@ -25,17 +25,17 @@ echo $COVER_FILE
 
 
 if [ $1 == "ada" ]; then
-    ALBUM_NAME="彭蒙惠英語-$MONTH"
+    ALBUM_NAME="彭蒙惠英語-$YEAR-$MONTH"
     ARTIST_NAME="彭蒙惠英語"
     TITLE_NAME="彭蒙惠英語-$YEAR-$MONTH-$DAY"
 fi
 if [ $1 == "baa" ]; then
-    ALBUM_NAME="空中英語教室-$MONTH"
+    ALBUM_NAME="空中英語教室-$YEAR-$MONTH"
     ARTIST_NAME="空中英語教室"
     TITLE_NAME="空中英語教室-$YEAR-$MONTH-$DAY"
 fi
 if [ $1 == "lta" ]; then
-    ALBUM_NAME="大家說英語-$MONTH"
+    ALBUM_NAME="大家說英語-$YEAR-$MONTH"
     ARTIST_NAME="大家說英語"
     TITLE_NAME="大家說英語-$YEAR-$MONTH-$DAY"
 fi
